@@ -1,5 +1,9 @@
 # 🏀 Система генерации фактов для авто формирования материалов о баскетбольных матчах
 
+> 📋 **Правила добавления кода:** [rules.md](./docs/rules.md)
+> 
+> 🛠️ **Сборка / запуск проекта:** [setup.md](./docs/setup.md)
+
 ### Исполнитель:
 - Власова Мария Андреевна 
 
@@ -16,19 +20,21 @@
 ### Структура:
 
 ```
-edu_analytics/
-├── backend/
-│   ├── app/
-│   └── Dockerfile
-├── frontend/
-│   ├── ...
-│   └── Dockerfile
-├── .github/
-├── docker-compose.yml
-├── .env
-├── .gitignore
-├── .pre-commit-config.yaml
-├── pyproject.toml
-├── rules.md
-└── README.md
+basketball-fact-ranking/
+├── backend/                            # FastAPI сервис
+│   ├── app/                            # API и бизнес логика
+│   │
+│   ├── config.py                       # Загрузка и проверка конфигурации из .env
+│   ├── pyproject.toml                  # Зависимости для backend
+│   ├── poetry.lock                     # Зависимости в моменте?
+│   └── Dockerfile                      # Dockerfile для backend
+│
+├── docs/                               # Документация
+│   ├── rules.md                        # Правила добавления кода / git команды
+│   └── setup.md                        # Информация о проекте / сборке и запуске
+│
+├── docker-compose.yml                  # Сборка всех контейнеров
+├── .env                                # Значения конфигурации
+├── .gitignore                          # Ненужные для git файлы
+└── README.md                           # Основное описание проекта
 ```
